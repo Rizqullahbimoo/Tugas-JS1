@@ -1,0 +1,151 @@
+/* styles.css */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #f3a683, #3dc1d3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    animation: fadeIn 1s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  div {
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  label {
+    display: block;
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  
+  input:focus {
+    border-color: #3dc1d3;
+    box-shadow: 0 4px 8px rgba(61, 193, 211, 0.2);
+  }
+  
+  input[type="password"]:hover {
+    border-color: #f3a683;
+  }
+  
+  small {
+    color: red;
+    font-size: 0.9em;
+    display: block;
+    margin-top: 5px;
+    opacity: 0.8;
+    font-style: italic;
+  }
+  
+  button {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 1em;
+    color: #fff;
+    background: #3dc1d3;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background: #f3a683;
+  }
+  
+  button:active {
+    transform: scale(0.98);
+  }
+  
+  button:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(61, 193, 211, 0.5);
+  }
+  
+  input:valid {
+    border-color: #3dc1d3;
+  }
+  
+  input:invalid {
+    border-color: #f3a683;
+  }
+  
+  input[type="text"]:valid + label,
+  input[type="email"]:valid + label,
+  input[type="password"]:valid + label {
+    color: #3dc1d3;
+    font-weight: bold;
+  }
+  
+  input[type="text"]:invalid + label,
+  input[type="email"]:invalid + label,
+  input[type="password"]:invalid + label {
+    color: #f3a683;
+  }
+  
+  /* Tooltip style */
+  small::before {
+    content: "⚠️ ";
+    display: inline;
+    color: #f3a683;
+  }
+  
+  small::after {
+    content: " ";
+    display: inline;
+  }
+  
+  /* Transition effect on the form */
+  form {
+    transform: translateY(-10px);
+    opacity: 0;
+    animation: slideIn 0.8s forwards;
+  }
+  
+  @keyframes slideIn {
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
